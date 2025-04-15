@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B387A51D-D536-4731-99C5-5F91A0F06AC8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DeepCore</RootNamespace>
+    <AssemblyName>DeepCore</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony" />
+    <Reference Include="Assembly-CSharp" />
+    <Reference Include="DataModel" />
+    <Reference Include="Il2Cppmscorlib" />
+    <Reference Include="Il2CppSystem.Core" />
+    <Reference Include="Localization.LocalizableString" />
+    <Reference Include="MelonLoader" />
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="Photon-DotNet" />
+    <Reference Include="ReMod.Core" />
+    <Reference Include="SteamVR" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="UnhollowerBaseLib" />
+    <Reference Include="Unity.TextMeshPro" />
+    <Reference Include="UnityEngine.AnimationModule" />
+    <Reference Include="UnityEngine.AssetBundleModule" />
+    <Reference Include="UnityEngine.AudioModule" />
+    <Reference Include="UnityEngine.CoreModule" />
+    <Reference Include="UnityEngine.ImageConversionModule" />
+    <Reference Include="UnityEngine.IMGUIModule" />
+    <Reference Include="UnityEngine.InputLegacyModule" />
+    <Reference Include="UnityEngine.ParticleSystemModule" />
+    <Reference Include="UnityEngine.PhysicsModule" />
+    <Reference Include="UnityEngine.SubsystemsModule" />
+    <Reference Include="UnityEngine.TextRenderingModule" />
+    <Reference Include="UnityEngine.UI" />
+    <Reference Include="UnityEngine.UIModule" />
+    <Reference Include="UnityEngine.UnityWebRequestModule" />
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule" />
+    <Reference Include="UnityEngine.VideoModule" />
+    <Reference Include="UnityEngine.VRModule" />
+    <Reference Include="UnityEngine.XRModule" />
+    <Reference Include="VRC.Udon" />
+    <Reference Include="VRC.Udon.Common" />
+    <Reference Include="VRC.Udon.VM" />
+    <Reference Include="VRC.UI.Elements" />
+    <Reference Include="VRC.UI.Shared" />
+    <Reference Include="VRCCore-Standalone" />
+    <Reference Include="VRCEconomy" />
+    <Reference Include="VRCSDK2" />
+    <Reference Include="VRCSDK3" />
+    <Reference Include="VRCSDKBase" />
+    <Reference Include="websocket-sharp" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BuildInfo.cs" />
+    <Compile Include="Client\API\APIUtils.cs" />
+    <Compile Include="Client\API\PlayerTagSystem.cs" />
+    <Compile Include="Client\API\Struct0.cs" />
+    <Compile Include="Client\ClientMenu\LaunchPad_Menu.cs" />
+    <Compile Include="Client\ClientMenu\Main_Menu.cs" />
+    <Compile Include="Client\ClientMenu\MenuBuilder.cs" />
+    <Compile Include="Client\ClientMenu\Pages_MainMenu\AvatarSaver.cs" />
+    <Compile Include="Client\ClientMenu\Pages_MainMenu\ClientChat.cs" />
+    <Compile Include="Client\ClientMenu\Pages_MainMenu\ClientSettings.cs" />
+    <Compile Include="Client\ClientMenu\Pages_MainMenu\DevMenu.cs" />
+    <Compile Include="Client\ClientMenu\Pages_MainMenu\ExploitHacks.cs" />
+    <Compile Include="Client\ClientMenu\Pages_MainMenu\InstaceHistory.cs" />
+    <Compile Include="Client\ClientMenu\Pages_MainMenu\ItemManipulator.cs" />
+    <Compile Include="Client\ClientMenu\Pages_MainMenu\LastSeenAvatars.cs" />
+    <Compile Include="Client\ClientMenu\Pages_MainMenu\LovenseFunctions.cs" />
+    <Compile Include="Client\ClientMenu\Pages_MainMenu\MediaControl.cs" />
+    <Compile Include="Client\ClientMenu\Pages_MainMenu\MovementHacks.cs" />
+    <Compile Include="Client\ClientMenu\Pages_MainMenu\SoundBoardMenu.cs" />
+    <Compile Include="Client\ClientMenu\Pages_MainMenu\UtilFunctions.cs" />
+    <Compile Include="Client\ClientMenu\Pages_MainMenu\VisualHacks.cs" />
+    <Compile Include="Client\ClientMenu\Target_Menu.cs" />
+    <Compile Include="Client\ClientUtils.cs" />
+    <Compile Include="Client\Coroutine\CoroutineManager.cs" />
+    <Compile Include="Client\Coroutine\CustomInputpopup.cs" />
+    <Compile Include="Client\Coroutine\CustomLoadingAudios.cs" />
+    <Compile Include="Client\Coroutine\CustomLoadingScreen.cs" />
+    <Compile Include="Client\Coroutine\CustomMenuBG.cs" />
+    <Compile Include="Client\Coroutine\CustomStandardPopup.cs" />
+    <Compile Include="Client\Coroutine\CustomVRLoadingOverlay.cs" />
+    <Compile Include="Client\Coroutine\LoadingParticules.cs" />
+    <Compile Include="Client\Coroutine\LoadingVideo.cs" />
+    <Compile Include="Client\Coroutine\StoreLoginPrompt.cs" />
+    <Compile Include="Client\DeepConsole.cs" />
+    <Compile Include="Client\GUI\LineESP.cs" />
+    <Compile Include="Client\GUI\TestModMenu.cs" />
+    <Compile Include="Client\GUI\UIButton.cs" />
+    <Compile Include="Client\GUI\UIPage.cs" />
+    <Compile Include="Client\GUI\UpdateModule.cs" />
+    <Compile Include="Client\Misc\AvatarLoggerHandler.cs" />
+    <Compile Include="Client\Misc\Avatar_Object.cs" />
+    <Compile Include="Client\Misc\Binds.cs" />
+    <Compile Include="Client\Misc\ERPChecker.cs" />
+    <Compile Include="Client\Misc\EventCodes.cs" />
+    <Compile Include="Client\Misc\ForceGarbageCollection.cs" />
+    <Compile Include="Client\Misc\MediaKeys.cs" />
+    <Compile Include="Client\Misc\MonoDumper.cs" />
+    <Compile Include="Client\Misc\PhotonEx.cs" />
+    <Compile Include="Client\Misc\PhotonUtil.cs" />
+    <Compile Include="Client\Misc\PlayerUtil.cs" />
+    <Compile Include="Client\Misc\PopupHelper.cs" />
+    <Compile Include="Client\Misc\SerializationUtil.cs" />
+    <Compile Include="Client\Misc\SpriteManager.cs" />
+    <Compile Include="Client\Misc\TextButton.cs" />
+    <Compile Include="Client\Misc\UdonDisassembler.cs" />
+    <Compile Include="Client\Misc\UIColorManager.cs" />
+    <Compile Include="Client\Misc\VrcExtensions.cs" />
+    <Compile Include="Client\Misc\WMessageBox.cs" />
+    <Compile Include="Client\Misc\WorldLoggerHandler.cs" />
+    <Compile Include="Client\Misc\World_Object.cs" />
+    <Compile Include="Client\Module\ApplicationBot\AppBotMenu.cs" />
+    <Compile Include="Client\Module\ApplicationBot\Bot.cs" />
+    <Compile Include="Client\Module\ApplicationBot\BotAPI.cs" />
+    <Compile Include="Client\Module\ApplicationBot\ObjectExtensions.cs" />
+    <Compile Include="Client\Module\ApplicationBot\PlayerExtensions.cs" />
+    <Compile Include="Client\Module\ApplicationBot\SocketConnection.cs" />
+    <Compile Include="Client\Module\Exploits\AvatarHeight.cs" />
+    <Compile Include="Client\Module\Exploits\AviYoinker.cs" />
+    <Compile Include="Client\Module\Exploits\BeyBladePickup.cs" />
+    <Compile Include="Client\Module\Exploits\CamSoundSpammer.cs" />
+    <Compile Include="Client\Module\Exploits\EarRape.cs" />
+    <Compile Include="Client\Module\Exploits\ForceLewd.cs" />
+    <Compile Include="Client\Module\Exploits\InvSpammer.cs" />
+    <Compile Include="Client\Module\Exploits\ItemClapper.cs" />
+    <Compile Include="Client\Module\Exploits\ItemLagger.cs" />
+    <Compile Include="Client\Module\Exploits\ItemOrbit.cs" />
+    <Compile Include="Client\Module\Exploits\LoudMic.cs" />
+    <Compile Include="Client\Module\Exploits\MirrorsSpammer.cs" />
+    <Compile Include="Client\Module\Exploits\OwnerNameSpoofer.cs" />
+    <Compile Include="Client\Module\Exploits\PenClapper.cs" />
+    <Compile Include="Client\Module\Exploits\PickupDropper.cs" />
+    <Compile Include="Client\Module\Exploits\PortalEploits.cs" />
+    <Compile Include="Client\Module\Exploits\SpyCamera.cs" />
+    <Compile Include="Client\Module\Exploits\SwasticaOrbit.cs" />
+    <Compile Include="Client\Module\Exploits\UdonNuker.cs" />
+    <Compile Include="Client\Module\Exploits\VideoClapper.cs" />
+    <Compile Include="Client\Module\Exploits\WTriggerNuker.cs" />
+    <Compile Include="Client\Module\Funnies\FagFinder.cs" />
+    <Compile Include="Client\Module\Funnies\RussianRoulette.cs" />
+    <Compile Include="Client\Module\Movement\Flight.cs" />
+    <Compile Include="Client\Module\Movement\ForceJump.cs" />
+    <Compile Include="Client\Module\Movement\HeadFlipper.cs" />
+    <Compile Include="Client\Module\Movement\Jetpack.cs" />
+    <Compile Include="Client\Module\Movement\PosSaver.cs" />
+    <Compile Include="Client\Module\Movement\RayCastTP.cs" />
+    <Compile Include="Client\Module\Movement\SeatOnHead.cs" />
+    <Compile Include="Client\Module\Movement\SpinBot.cs" />
+    <Compile Include="Client\Module\Movement\TPose.cs" />
+    <Compile Include="Client\Module\Movement\UpdateModule.cs" />
+    <Compile Include="Client\Module\OnLoadedScaneManager.cs" />
+    <Compile Include="Client\Module\Photon\ChatBoxLogger.cs" />
+    <Compile Include="Client\Module\Photon\E1ExploitBlocker.cs" />
+    <Compile Include="Client\Module\Photon\ModerationNotice.cs" />
+    <Compile Include="Client\Module\Photon\MovementSerilize.cs" />
+    <Compile Include="Client\Module\Photon\PhotonDebugger.cs" />
+    <Compile Include="Client\Module\Photon\PhtonManagerUtils.cs" />
+    <Compile Include="Client\Module\QOL\CacheCleanr.cs" />
+    <Compile Include="Client\Module\QOL\CameraBehindMode.cs" />
+    <Compile Include="Client\Module\QOL\CameraMode.cs" />
+    <Compile Include="Client\Module\QOL\CoreLimiter.cs" />
+    <Compile Include="Client\Module\QOL\KeyBindManager.cs" />
+    <Compile Include="Client\Module\QOL\LastInstanceRejoiner.cs" />
+    <Compile Include="Client\Module\QOL\LoadingScreenPictures.cs" />
+    <Compile Include="Client\Module\QOL\ModSettings.cs" />
+    <Compile Include="Client\Module\QOL\NoSteamAtAll.cs" />
+    <Compile Include="Client\Module\QOL\OldLoadingScreenMod.cs" />
+    <Compile Include="Client\Module\QOL\QMFreeze.cs" />
+    <Compile Include="Client\Module\QOL\RamCleaner.cs" />
+    <Compile Include="Client\Module\QOL\ThirdPersonView.cs" />
+    <Compile Include="Client\Module\QOL\UdonSoundBoard.cs" />
+    <Compile Include="Client\Module\RPC\RPCManager.cs" />
+    <Compile Include="Client\Module\Security\AntiCrash.cs" />
+    <Compile Include="Client\Module\Visual\BoxESP.cs" />
+    <Compile Include="Client\Module\Visual\ESP.cs" />
+    <Compile Include="Client\Module\Visual\Flashlight.cs" />
+    <Compile Include="Client\Module\Visual\FlipScreen.cs" />
+    <Compile Include="Client\Module\Visual\LineESP.cs" />
+    <Compile Include="Client\Module\Visual\OptifineZoom.cs" />
+    <Compile Include="Client\Module\Visual\SelfHide.cs" />
+    <Compile Include="Client\Module\Visual\UpdateModule.cs" />
+    <Compile Include="Client\Module\WorldHacks\AmongUs.cs" />
+    <Compile Include="Client\Module\WorldHacks\BlackCat.cs" />
+    <Compile Include="Client\Module\WorldHacks\FrenchFursHub.cs" />
+    <Compile Include="Client\Module\WorldHacks\JustBClub3.cs" />
+    <Compile Include="Client\Module\WorldHacks\MagicFreezeTag.cs" />
+    <Compile Include="Client\Module\WorldHacks\Murder4.cs" />
+    <Compile Include="Client\Module\WorldHacks\PickupMenu.cs" />
+    <Compile Include="Client\Module\WorldHacks\PickupUtils.cs" />
+    <Compile Include="Client\Module\WorldHacks\TowerDefence.cs" />
+    <Compile Include="Client\Module\WorldHacks\WorldHackMainMenu.cs" />
+    <Compile Include="Client\Mono\CoroutineHandler.cs" />
+    <Compile Include="Client\Mono\CustomNameplate.cs" />
+    <Compile Include="Client\Patching\ClonePatch.cs" />
+    <Compile Include="Client\Patching\EasyPatching.cs" />
+    <Compile Include="Client\Patching\FakeHWIDPatch.cs" />
+    <Compile Include="Client\Patching\GameVersionSpoofer.cs" />
+    <Compile Include="Client\Patching\HighlightColorPatch.cs" />
+    <Compile Include="Client\Patching\Initpatches.cs" />
+    <Compile Include="Client\Patching\LoadBalancingClientPatch.cs" />
+    <Compile Include="Client\Patching\NetworkManagerPatch.cs" />
+    <Compile Include="Client\Patching\OnAvatarChangedPatch.cs" />
+    <Compile Include="Client\Patching\RoomManagerPatch.cs" />
+    <Compile Include="Client\Patching\SpooferPatch.cs" />
+    <Compile Include="Client\Patching\TimePatch.cs" />
+    <Compile Include="Client\Patching\TriggerWorldPatch.cs" />
+    <Compile Include="Client\Patching\UdonSyncPatch.cs" />
+    <Compile Include="Client\Patching\VideoPlayerPatch.cs" />
+    <Compile Include="Client\Patching\WebSocketPatch.cs" />
+    <Compile Include="Client\UI\MM\MMUI.cs" />
+    <Compile Include="Client\UI\QM\MenuMusic.cs" />
+    <Compile Include="Client\UI\QM\QMConsole.cs" />
+    <Compile Include="Client\UI\QM\QMPlayerList.cs" />
+    <Compile Include="Client\UI\QM\QMUI.cs" />
+    <Compile Include="Client\UI\UIController.cs" />
+    <Compile Include="ConfManager.cs" />
+    <Compile Include="Entry.cs" />
+    <Compile Include="Instance.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Protecc\BaseProtecc.cs" />
+    <Compile Include="Protecc\BSODTriggerThings.cs" />
+    <Compile Include="ServerAPI\AuthAPI.cs" />
+    <Compile Include="ServerAPI\LoggerAPI.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Yoink.exe" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
